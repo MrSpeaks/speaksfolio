@@ -76,20 +76,7 @@ export default function Hero() {
         <a 
           href="https://speaksstudio.vercel.app"
           target="_blank"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            background: 'transparent',
-            border: '1px solid #008060',
-            borderRadius: '20px',
-            padding: '8px 16px',
-            fontSize: '12px',
-            color: '#008060',
-            textDecoration: 'none',
-            fontWeight: '600',
-            marginTop: '16px'
-          }}
+          className="group inline-flex w-max mt-6 px-6 py-3 border border-accent/50 text-accent font-bold rounded-full hover:bg-accent/10 transition-all hover:shadow-[0_0_20px_rgba(0,230,118,0.2)]"
         >
           🇮🇳 Work with me → Speaks Studio
         </a>

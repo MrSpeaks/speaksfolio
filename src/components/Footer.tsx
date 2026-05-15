@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="text-center">
           speaksstudio.vercel.app
         </div>
-        <div className="text-accent">Building Perfect in Time 🚀</div>
+        <div className="text-accent">One product at a time 🚀</div>
       </div>
     </footer>
   );
