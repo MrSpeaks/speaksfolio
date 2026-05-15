@@ -73,6 +73,26 @@ export default function Hero() {
             </span>
           </a>
         </div>
+        <a 
+          href="https://speaksstudio.vercel.app"
+          target="_blank"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            background: 'transparent',
+            border: '1px solid #008060',
+            borderRadius: '20px',
+            padding: '8px 16px',
+            fontSize: '12px',
+            color: '#008060',
+            textDecoration: 'none',
+            fontWeight: '600',
+            marginTop: '16px'
+          }}
+        >
+          🇮🇳 Work with me → Speaks Studio
+        </a>
       </motion.div>
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes blink {

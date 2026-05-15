@@ -4,16 +4,18 @@ import { motion } from "framer-motion";
 
 const lines = [
   "Started in the wrong direction.",
-  "Spent 2 years preparing for medical.",
+  "2 years preparing for medical.",
   "Realized in February it wasn't me.",
-  "Pivoted to tech. Taught myself to build.",
-  "Shipped my first SaaS in 17 days.",
+  "Pivoted to tech. Taught myself",
+  "to build.",
+  "Shipped first SaaS in 17 days.",
   "",
-  "Not waiting for college to start building.",
-  "Not waiting for permission to create.",
+  "Now building bulletproof backends",
+  "for Indian SaaS founders through",
+  "Speaks Studio.",
   "",
-  "Currently preparing for DU CIC",
-  "while shipping products on the side.",
+  "Not waiting for college to start.",
+  "Not waiting for permission.",
   "",
   "This is just the beginning."
 ];

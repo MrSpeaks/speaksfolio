@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 font-mono text-sm text-gray-500">
         <div>Manan Speaks &middot; 2026</div>
         <div className="text-center">
-          Built with <span className="text-white">Next.js</span> &middot; Deployed on <span className="text-white">Vercel</span>
+          speaksstudio.vercel.app
         </div>
-        <div className="text-accent">One product at a time 🚀</div>
+        <div className="text-accent">Building Perfect in Time 🚀</div>
       </div>
     </footer>
   );
