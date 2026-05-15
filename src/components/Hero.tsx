@@ -35,7 +35,7 @@ export default function Hero() {
           Building Products That Create Value
         </h2>
         <p className="text-gray-400 text-lg mb-8 font-mono max-w-2xl">
-          Indie Founder &middot; SaaS Builder &middot; 21 y/o from Ludhiana 🇮🇳
+          Indie Founder &middot; SaaS Builder &middot; Young Builder from India 🇮🇳
         </p>
 
         <div className="h-16 mb-10 font-mono text-xl md:text-2xl text-gray-300">

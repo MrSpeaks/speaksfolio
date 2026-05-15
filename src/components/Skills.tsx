@@ -6,7 +6,7 @@ const skills = [
   "Next.js", "React", "Supabase", "PostgreSQL",
   "Vercel", "Google APIs", "Chrome Extensions",
   "Dodo Payments", "Upstash QStash", "TypeScript",
-  "Node.js", "REST APIs", "Claude", "Cursor", "Antigravity"
+  "Node.js", "REST APIs", "Claude", "Antigravity"
 ];
 
 const containerVariants: Variants = {
