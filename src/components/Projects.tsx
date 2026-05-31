@@ -1,17 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ExternalLink, Lock } from "lucide-react";
 
 export default function Projects() {
   const [isSpeedSpeaksOpen, setIsSpeedSpeaksOpen] = useState(false);
-  const { scrollYProgress } = useScroll();
-  const scaleY = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
 
   return (
     <section id="projects" className="py-24 px-6 sm:px-12 md:px-24 relative">
@@ -34,8 +28,11 @@ export default function Projects() {
         {/* Animated timeline line */}
         <div className="absolute left-[27px] md:left-[39px] top-0 bottom-0 w-[2px] bg-white/10" />
         <motion.div 
-          className="absolute left-[27px] md:left-[39px] top-0 bottom-0 w-[2px] bg-accent origin-top"
-          style={{ scaleY }}
+          className="absolute left-[27px] md:left-[39px] top-0 w-[2px] bg-accent"
+          initial={{ height: 0 }}
+          whileInView={{ height: "calc(100% - 160px)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
         />
 
         <div className="space-y-16 relative">
