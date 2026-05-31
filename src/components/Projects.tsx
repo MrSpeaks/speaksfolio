@@ -1,11 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { ChevronDown, ExternalLink, Lock } from "lucide-react";
 
 export default function Projects() {
   const [isSpeedSpeaksOpen, setIsSpeedSpeaksOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   return (
     <section id="projects" className="py-24 px-6 sm:px-12 md:px-24 relative">
@@ -27,13 +33,6 @@ export default function Projects() {
       <div className="relative">
         {/* Animated timeline line */}
         <div className="absolute left-[27px] md:left-[39px] top-0 bottom-0 w-[2px] bg-white/10" />
-        <motion.div 
-          className="absolute left-[27px] md:left-[39px] top-0 w-[2px] bg-accent"
-          initial={{ height: 0 }}
-          whileInView={{ height: "calc(100% - 160px)" }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
 
         <div className="space-y-16 relative">
           {/* SpeedSpeaks Project */}
@@ -42,8 +41,13 @@ export default function Projects() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row gap-6 md:gap-12 group"
+            className="flex flex-col md:flex-row gap-6 md:gap-12 group relative"
           >
+            {/* Scroll progress line spanning SpeedSpeaks down to OpsFlow icon */}
+            <motion.div 
+              className="absolute left-[27px] md:left-[39px] top-0 bottom-[-104px] w-[2px] bg-accent origin-top z-0"
+              style={{ scaleY }}
+            />
             <div className="flex-shrink-0 z-10 hidden md:block">
               <div className="w-20 h-20 rounded-full bg-surface border-4 border-surface flex items-center justify-center relative shadow-[0_0_20px_rgba(0,230,118,0.2)]">
                  <div className="w-4 h-4 bg-accent rounded-full absolute -right-2 top-1/2 -translate-y-1/2" />
