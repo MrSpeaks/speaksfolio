@@ -1,17 +1,24 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useScroll, useSpring, useTransform } from "framer-motion";
 import { ChevronDown, ExternalLink, Lock } from "lucide-react";
 
 export default function Projects() {
   const [isSpeedSpeaksOpen, setIsSpeedSpeaksOpen] = useState(false);
-  const { scrollYProgress } = useScroll();
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"]
+  });
   const scaleY = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001
   });
+  
+  const heightTransform = useTransform(scaleY, [0, 1], ["0%", "100%"]);
 
   return (
     <section id="projects" className="py-24 px-6 sm:px-12 md:px-24 relative">
@@ -31,12 +38,13 @@ export default function Projects() {
       </motion.div>
 
       <div className="relative">
-        {/* Animated timeline line */}
-        <div className="absolute left-[27px] md:left-[39px] top-0 bottom-0 w-[2px] bg-white/10" />
+        {/* Background dashed timeline line */}
+        <div className="absolute left-[27px] md:left-[39px] top-0 bottom-0 w-[2px] border-l-2 border-dashed border-white/10" />
 
         <div className="space-y-16 relative">
           {/* SpeedSpeaks Project */}
           <motion.div 
+            ref={containerRef}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -44,10 +52,14 @@ export default function Projects() {
             className="flex flex-col md:flex-row gap-6 md:gap-12 group relative"
           >
             {/* Scroll progress line spanning SpeedSpeaks down to OpsFlow icon */}
-            <motion.div 
-              className="absolute left-[27px] md:left-[39px] top-0 bottom-[-104px] w-[2px] bg-accent origin-top z-0"
-              style={{ scaleY }}
-            />
+            <div className="absolute left-[27px] md:left-[39px] top-0 bottom-[-104px] w-[2px] z-0">
+              <motion.div 
+                className="absolute top-0 left-0 w-full bg-accent"
+                style={{ height: heightTransform }}
+              >
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 bg-accent rounded-full animate-pulse shadow-[0_0_20px_rgba(0,230,118,1)]" />
+              </motion.div>
+            </div>
             <div className="flex-shrink-0 z-10 hidden md:block">
               <div className="w-20 h-20 rounded-full bg-surface border-4 border-surface flex items-center justify-center relative shadow-[0_0_20px_rgba(0,230,118,0.2)]">
                  <div className="w-4 h-4 bg-accent rounded-full absolute -right-2 top-1/2 -translate-y-1/2" />
