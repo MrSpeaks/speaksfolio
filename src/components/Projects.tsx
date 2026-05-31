@@ -125,11 +125,8 @@ export default function Projects() {
                         <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
                           <h4 className="text-accent font-mono font-bold mb-2">Key learning:</h4>
                           <p className="text-gray-300 italic whitespace-pre-line">
-                            "The first product teaches you{"\n"}
-                            everything — building, shipping,{"\n"}
-                            failing, fixing and starting again.{"\n"}
-                            Nothing prepares you better{"\n"}
-                            than actually doing it."
+                            "The first product is always{"\n"}
+                            the hardest. Ship it anyway."
                           </p>
                         </div>
                       </div>
