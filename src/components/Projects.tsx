@@ -51,7 +51,7 @@ export default function Projects() {
             transition={{ duration: 0.6 }}
             className="flex flex-col md:flex-row gap-6 md:gap-12 group relative"
           >
-            {/* Scroll progress line spanning SpeedSpeaks down to OpsFlow icon */}
+            {/* Scroll progress line spanning SpeedSpeaks down to CRMSpeaks icon */}
             <div className="absolute left-[27px] md:left-[39px] top-0 bottom-[-104px] w-[2px] z-0">
               <motion.div 
                 className="absolute top-0 left-0 w-full bg-accent"
@@ -149,7 +149,7 @@ export default function Projects() {
             </div>
           </motion.div>
 
-          {/* OpsFlow Project */}
+          {/* CRMSpeaks Project */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -160,38 +160,45 @@ export default function Projects() {
             <div className="flex-shrink-0 z-10 hidden md:block">
               <div className="w-20 h-20 rounded-full bg-surface border-4 border-surface flex items-center justify-center relative">
                  <div className="w-4 h-4 bg-amber-500 rounded-full absolute -right-2 top-1/2 -translate-y-1/2" />
-                 <span className="font-mono font-bold text-amber-500 text-lg">OF</span>
+                 <span className="font-mono font-bold text-amber-500 text-lg">CS</span>
               </div>
             </div>
             
             <div className="flex-grow">
               <div className="bg-surface/80 border-l-4 border-dashed border-amber-500/50 p-6 md:p-8 rounded-r-xl transition-all duration-300">
                 <div className="flex flex-wrap gap-3 items-center mb-4">
-                  <h3 className="font-mono font-bold text-2xl text-white">OpsFlow</h3>
+                  <h3 className="font-mono font-bold text-2xl text-white">CRMSpeaks</h3>
                   <span className="px-3 py-1 bg-amber-500/20 text-amber-500 text-xs font-mono font-bold rounded-full border border-amber-500/30">
                     Building Now 🔨
                   </span>
                   <span className="px-3 py-1 bg-white/5 text-gray-300 text-xs font-mono rounded-full border border-white/10">
-                    Sales Operations System
+                    Operational Relationship System
                   </span>
                 </div>
                 
-                <p className="text-gray-400 mb-6 font-sans">
-                  Operational intelligence system for businesses tired of managing leads on WhatsApp. Clean pipeline, activity tracking, follow-up intelligence and operational dashboard.
+                <p className="text-gray-400 mb-6 font-sans whitespace-pre-line">
+                  {"Operational clarity\n" +
+                   "system for Indian businesses tired\n" +
+                   "of running sales on WhatsApp.\n" +
+                   "Leads · Pipeline · Follow-ups ·\n" +
+                   "Team operations."}
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-6 text-sm font-mono text-gray-500">
                   <div className="flex items-center gap-2">
-                    <span className="text-amber-500">●</span> Day 1 of 14
+                    <span className="text-amber-500">●</span> Day 2 of 14
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-amber-500">●</span> Auth
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-amber-500">●</span> Leads
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-amber-500">●</span> Multi tenant
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-amber-500">●</span> RLS
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-amber-500">●</span> 6 table architecture
                   </div>
                 </div>
 
@@ -204,8 +211,8 @@ export default function Projects() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="https://opsflow-nu.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-amber-500/30 text-amber-500 font-mono font-bold rounded hover:bg-amber-500/10 transition-colors">
-                    View Progress →
+                  <a href="https://crmspeaks.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-amber-500/30 text-amber-500 font-mono font-bold rounded hover:bg-amber-500/10 transition-colors">
+                    crmspeaks.vercel.app <ExternalLink size={16} />
                   </a>
                 </div>
               </div>
