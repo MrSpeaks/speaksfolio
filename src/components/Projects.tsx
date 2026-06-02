@@ -186,7 +186,7 @@ export default function Projects() {
 
                 <div className="flex flex-wrap gap-4 mb-6 text-sm font-mono text-gray-500">
                   <div className="flex items-center gap-2">
-                    <span className="text-amber-500">●</span> Day 2 of 14
+                    <span className="text-amber-500">●</span> Building it in 14 Days
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-amber-500">●</span> Auth
